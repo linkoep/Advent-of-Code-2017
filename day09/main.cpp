@@ -7,8 +7,7 @@ int main() {
   int garbage = 0;
   char c;
   while (std::cin >> c) {
-    if (c== '!') { std::cin >> c; }
-    else if (c == '{') { ++level; }
+    if (c == '{') { ++level; }
     else if (c == '}') {
       scores[level]++;
       --level;
