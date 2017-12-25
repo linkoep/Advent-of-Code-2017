@@ -32,8 +32,11 @@ int main () {
     }
   }
   
+  //Part 2:
+  int counter = 0;
   //follow diagram
   while (x>=0 && y>=0 && x<diagram[y].size() && y<diagram.size()) {
+    ++counter;
    switch(direction) {
      case 'u': --y;
 	     break;
@@ -63,7 +66,7 @@ int main () {
    } else if (diagram[y][x] != ' ') {
      answer += diagram[y][x];
    } else {
-     std::cout << answer << std::endl;
+     std::cout << answer << " " << counter << std::endl;
      break;
    }
   }
